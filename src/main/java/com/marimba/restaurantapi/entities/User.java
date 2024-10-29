@@ -6,6 +6,7 @@ import java.util.List;
 @Entity
 @Table(name = "USERS")
 public class User {
+    //segunda prueba
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", unique = true, nullable = false)
