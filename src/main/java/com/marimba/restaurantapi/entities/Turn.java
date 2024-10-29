@@ -21,7 +21,7 @@ public class Turn {
 	@Column(name = "ID", unique = true, nullable = false)
 	private Long id;
 	
-	
+	//prueba de si funciona git
 	@Column(name = "NAME")
 	private String name;
 	
