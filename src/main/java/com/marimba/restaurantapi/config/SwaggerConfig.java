@@ -11,6 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @Configuration
 @EnableSwagger2
+//Hace la documentacion de la API y se logran hacer pruebas de esta
 public class SwaggerConfig {
 	
 	@Bean
