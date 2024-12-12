@@ -21,6 +21,8 @@ public class MarimbaException extends Exception {
 		this.responseCode = responseCode;
 	}
 
+
+
 	public MarimbaException(String code, int responseCode, String message, List<ErrorDto> errorList) {
 		super(message);
 		this.code = code;
@@ -28,7 +30,9 @@ public class MarimbaException extends Exception {
 		this.errorList.addAll(errorList);
 	}
 
-	public String getCode() {
+
+
+    public String getCode() {
 		return code;
 	}
 

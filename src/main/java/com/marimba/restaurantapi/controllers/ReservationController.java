@@ -34,7 +34,7 @@ public class ReservationController {
 	@ResponseStatus(HttpStatus.OK)
 	 @RequestMapping(value="reservation", method =RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	public MarimbaResponse<String> createReservation(@RequestBody CreateReservationRest createReservationRest) throws MarimbaException{
-		return new MarimbaResponse<>("Succes", String.valueOf(HttpStatus.OK), "OK", 
+		return new MarimbaResponse<>("Success", String.valueOf(HttpStatus.OK), "OK",
 		   reservationService.createReservation(createReservationRest));
 	}
 }

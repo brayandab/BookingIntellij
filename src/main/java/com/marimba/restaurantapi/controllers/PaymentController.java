@@ -27,15 +27,16 @@ public class PaymentController {
         String paymentString = paymentIntent.toJson();
         return  new ResponseEntity<String>(paymentString, HttpStatus.OK);
     }
+
     @ResponseStatus(HttpStatus.OK)
-    @RequestMapping(value= "/confirm", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<String> paymentConfirm(@RequestBody PaymentConfirmRest paymentConfirmRest) throws StripeException, MarimbaException {
+   @RequestMapping(value= "/confirm", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+   public ResponseEntity<String> paymentConfirm(@RequestBody PaymentConfirmRest paymentConfirmRest ) throws StripeException, MarimbaException {
 
-        PaymentIntent paymentIntent = paymentService.paymentConfirm(paymentConfirmRest);
+       PaymentIntent paymentIntent = paymentService.paymentConfirm(paymentConfirmRest);
 
-        String paymentString = paymentIntent.toJson();
-        return  new ResponseEntity<String>(paymentString, HttpStatus.OK);
-    }
+       String paymentString = paymentIntent.toJson();
+       return  new ResponseEntity<String>(paymentString, HttpStatus.OK);
+   }
     @ResponseStatus(HttpStatus.OK)
     @RequestMapping(value= "/cancel/{paymentId}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> paymentCancel(@PathVariable("paymentId") String paymentId)throws StripeException{

@@ -14,6 +14,7 @@ public interface PaymentService {
 
     public PaymentIntent paymentConfirm (PaymentConfirmRest PaymentConfirmRest) throws StripeException, MarimbaException;
 
+    //public PaymentIntent paymentConfirm(String paymentId) throws StripeException;
     public PaymentIntent paymentCancel(String paymentId) throws StripeException;
 
 }

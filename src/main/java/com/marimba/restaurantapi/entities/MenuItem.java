@@ -88,15 +88,15 @@ public class MenuItem {
         return reservation;
     }
 
-    public void setReservation(Reservation reservation) {
+    /*public void setReservation(Reservation reservation) {
         this.reservation = reservation;
-    }
+    }*/
 
     public Menu getMenu() {
         return menu;
     }
 
-    public void setMenu(Menu menu) {
+    /*public void setMenu(Menu menu) {
         this.menu = menu;
-    }
+    }*/
 }

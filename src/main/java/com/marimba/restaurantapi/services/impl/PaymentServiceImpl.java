@@ -36,11 +36,13 @@ public class PaymentServiceImpl implements PaymentService {
 
     public PaymentIntent paymentIntent(PaymentIntentRest paymentIntentRest) throws StripeException {
         Stripe.apiKey= secretkey;
+        paymentIntentRest.setPrice(1000);
         Map<String, Object> params = new HashMap<>();
         params.put("currency", Currency.EUR);
-        params.put("amount", paymentIntentRest.getPrice());
+        params.put("amount",paymentIntentRest.getPrice());
+        //System.out.println("Precio de la reserva: "+paymentIntentRest.getPrice());
         params.put("description",paymentIntentRest.getDescription());
-
+        System.out.println("Costo original: "+paymentIntentRest.getPrice());
         List<Object> paymentMethodTypes = new ArrayList<>();
         paymentMethodTypes.add("card");
 
